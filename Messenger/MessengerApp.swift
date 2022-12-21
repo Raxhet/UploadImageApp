@@ -51,9 +51,11 @@ struct Switcher: View {
     
     var body: some View {
         if (login) {
-            HomePage().environmentObject(vm)
+            HomePage()
+                .environmentObject(vm)
         } else {
-            LoginScreen().environmentObject(vm)
+            LoginScreen()
+                .environmentObject(vm)
         }
     }
 }
