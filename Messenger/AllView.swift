@@ -7,25 +7,42 @@
 
 import SwiftUI
 
-struct AllView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
-        
-        var body: some View {
-            switch viewRouter.currentPage {
-            case .loginPage:
-                LoginScreen()
-            case .signUpPage:
-                SignUpView()
-            case .signInPage:
-                LoginUserView()
-            case .homePage:
-                HomePage()
-            }
-        }
-}
-
-struct AllView_Previews: PreviewProvider {
-    static var previews: some View {
-        AllView().environmentObject(ViewRouter())
-    }
-}
+//struct AllView: View {
+//    @EnvironmentObject var user: UserStateViewModel
+//
+//        var body: some View {
+//            switch user.currentPage {
+//            case .loginPage:
+//                LoginScreen()
+//            case .signUpPage:
+//                SignUpView()
+//            case .signInPage:
+//                LoginUserView()
+//            case .homePage:
+//                HomePage()
+//            }
+//        }
+//}
+//
+//struct Switcher: View {
+//
+//    @EnvironmentObject var vm: UserStateViewModel
+//    @State private var login = UserDefaults.standard.bool(forKey: "log")
+//
+//    var body: some View {
+//        if (login) {
+//            HomePage()
+//                .environmentObject(vm)
+//        } else {
+//            LoginScreen()
+//                .environmentObject(vm)
+//        }
+//    }
+//}
+//
+//struct AllView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AllView()
+//            .environmentObject(UserStateViewModel())
+//    }
+//}

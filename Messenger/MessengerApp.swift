@@ -24,31 +24,15 @@ struct MessengerApp: App {
             //AllView().environmentObject(viewRouter)
             Switcher()
                 .environmentObject(usvm)
-            
-//            VStack {
-//                if (log) {
-//                    LoginScreen()
-//                } else {
-//                    HomePage()
-//                }
-//            }
-//            ContentView()
-//                .onAppear() {
-//                    if user.firstLogin {
-//                        viewRouter.currentPage = .loginPage
-//                    } else {
-//                        viewRouter.currentPage = .homePage
-//                    }
-//                }
         }
     }
 }
 
 struct Switcher: View {
-    
+
     @EnvironmentObject var vm: UserStateViewModel
     @State private var login = UserDefaults.standard.bool(forKey: "log")
-    
+
     var body: some View {
         if (login) {
             HomePage()

@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
-import Firebase
 
 struct ContentView: View {
     var body: some View {
-        HomePage()
+        testView()
     }
 }
 

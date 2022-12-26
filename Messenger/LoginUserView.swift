@@ -15,41 +15,64 @@ struct LoginUserView: View {
     @State private var password = ""
     @State var signInProcessing = false
     @State var signInErrorMessage = ""
+    @Environment(\.dismiss) var dismiss
     //@StateObject var user = UserStateViewModel()
     
     @EnvironmentObject var vm: UserStateViewModel
     @StateObject var user = UserStateViewModel()
     
-    
     var body: some View {
-        VStack{
-            HStack {
-                Text("Log In")
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                    .blur(radius: 2)
+                VStack{
+                    HStack {
+                        Text("Log In")
+                            .font(.custom(
+                                "AmericanTypewriter", size: 35)
+                            .weight(.black))
+                            .colorInvert()
+                    }
+                    
+                    TextField("", text: $email)
+                        .keyboardType(.emailAddress)
+                        .disableAutocorrection(true)
+                        .autocapitalization(.none)
+                        .frame(width: 270, height: 45, alignment: .center)
+                        .modifier(PlaceholderStyle(showPlaceHolder: email.isEmpty, placeholder: "Email"))
+                        .padding()
+                        
+                    
+                    SecureField("", text: $password)
+                        .frame(width: 270, height: 45, alignment: .center)
+                        .modifier(PlaceholderStyle(showPlaceHolder: password.isEmpty, placeholder: "Password"))
+                        
+                    
+                    Button(action: {
+                        user.signInUser(email: email, password: password)
+                    }) {
+                        Text("Log In")
+                            .foregroundColor(!signInProcessing ? .white : .gray)
+                            .frame(width: 295, height: 45, alignment: .center)
+                            .background(.orange)
+                            .cornerRadius(20)
+                            .padding()
+                    }
+                    .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel", role: .cancel) {
+                            dismiss()
+                        }
+                        .foregroundColor(.orange)
+                    }
             }
-            TextField("Email", text: $email)
-                .keyboardType(.emailAddress)
-                .disableAutocorrection(true)
-                .autocapitalization(.none)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 280, height: 45, alignment: .center)
-            
-            SecureField("Password", text: $password)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 280, height: 45, alignment: .center)
-            
-            Button(action: {
-                //vm.signInUser(email: email, password: password)
-                user.signInUser(email: email, password: password)
-            }) {
-                Text("Sign up")
-                    .foregroundColor(!signInProcessing ? .white : .gray)
-                    .frame(width: 280, height: 45, alignment: .center)
-                    .background(.blue)
-                    .cornerRadius(8)
-                    .padding()
             }
-            .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
         }
+        
+        
         if signInProcessing {
             ProgressView()
         }

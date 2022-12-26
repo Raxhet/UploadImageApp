@@ -20,64 +20,49 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 9ed50ab7a7581cff"
+                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 7f18fab18e1af878"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Messenger.MessengerApp.viewRouter : Messenger.ViewRouter"
+                  symbolName = "property wrapper backing initializer of Messenger.MessengerApp.usvm : Messenger.UserStateViewModel"
                   moduleName = "Messenger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
                   offsetFromSymbolStart = "48">
                </Location>
                <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 9e5a9a3c007f9f03"
+                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 537b5be6175b1a63"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Messenger.MessengerApp.viewRouter.getter : Messenger.ViewRouter"
+                  symbolName = "Messenger.MessengerApp.usvm.getter : Messenger.UserStateViewModel"
                   moduleName = "Messenger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "120">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - bd43cee6a7ff8923"
+                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 785cc06260565660"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Messenger.MessengerApp.$viewRouter.getter : SwiftUI.ObservedObject&lt;Messenger.ViewRouter&gt;.Wrapper"
+                  symbolName = "Messenger.MessengerApp.$usvm.getter : SwiftUI.ObservedObject&lt;Messenger.UserStateViewModel&gt;.Wrapper"
                   moduleName = "Messenger"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 5ab702886a9b9c24"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Messenger.MessengerApp.init() -&gt; Messenger.MessengerApp"
-                  moduleName = "Messenger"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "56">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -110,7 +95,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "392">
+                  offsetFromSymbolStart = "240">
                </Location>
                <Location
                   uuid = "67E58F61-6D44-45B4-884B-A0B1C32D3DA3 - 483c10ce4013ec2c"
@@ -125,9 +110,25 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "72">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "355A95ED-91C8-40EA-B38C-9226AA4F21B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Messenger/UserStateViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "signInUser(email:password:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -17,36 +17,56 @@ struct SignUpView: View {
     @State private var password = ""
     @State var signUpProccesing = false
     @State var signUpErrorMessage = ""
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack{
-            HStack {
-                Text("Create Account")
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                    .blur(radius: 2)
+                VStack{
+                    HStack {
+                        Text("Create Account")
+                            .font(.custom(
+                                "AmericanTypewriter", size: 35)
+                            .weight(.black))
+                            .colorInvert()
+                    }
+                    TextField("", text: $email)
+                        .keyboardType(.emailAddress)
+                        .disableAutocorrection(true)
+                        .autocapitalization(.none)
+                        .frame(width: 280, height: 40, alignment: .center)
+                        .modifier(PlaceholderStyle(showPlaceHolder: email.isEmpty, placeholder: "Email"))
+                        .padding()
+                    
+                    SecureField("", text: $password)
+                        .frame(width: 280, height: 40, alignment: .center)
+                        .modifier(PlaceholderStyle(showPlaceHolder: password.isEmpty, placeholder: "Password"))
+                    
+                    Button(action: {
+                        user.signUpUser(email: email, password: password)
+                    }) {
+                        Text("Create")
+                            .foregroundColor(!signUpProccesing ? .white : .gray)
+                            .frame(width: 295, height: 45, alignment: .center)
+                            .background(.orange)
+                            .cornerRadius(20)
+                            .padding()
+                    }
+                    .disabled(!signUpProccesing && !email.isEmpty && !password.isEmpty ? false : true)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Cancel", role: .cancel) {
+                            dismiss()
+                        }
+                        .foregroundColor(.orange)
+                    }
             }
-            TextField("Email", text: $email)
-                .keyboardType(.emailAddress)
-                .disableAutocorrection(true)
-                .autocapitalization(.none)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 280, height: 45, alignment: .center)
-            
-            SecureField("Password", text: $password)
-                .textFieldStyle(.roundedBorder)
-                .frame(width: 280, height: 45, alignment: .center)
-            
-            Button(action: {
-                //vm.signUpUser(email: email, password: password)
-                user.signUpUser(email: email, password: password)
-            }) {
-                Text("Sign up")
-                    .foregroundColor(!signUpProccesing ? .white : .gray)
-                    .frame(width: 280, height: 45, alignment: .center)
-                    .background(.blue)
-                    .cornerRadius(8)
-                    .padding()
             }
-            .disabled(!signUpProccesing && !email.isEmpty && !password.isEmpty ? false : true)
         }
+        
         if signUpProccesing {
             ProgressView()
         }

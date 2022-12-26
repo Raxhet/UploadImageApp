@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F1FF6E7294CE526009CB2B1 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */; };
+		0F1FF70E29562BF2009CB2B1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */; };
+		0F1FF7102956335E009CB2B1 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF70F2956335E009CB2B1 /* testView.swift */; };
+		0F1FF71229571123009CB2B1 /* PlaceholderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */; };
+		0F1FF71629575B3C009CB2B1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */; };
 		0FAEE59229031AC000B3CBED /* MessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE59129031AC000B3CBED /* MessengerApp.swift */; };
 		0FAEE59429031AC000B3CBED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE59329031AC000B3CBED /* ContentView.swift */; };
 		0FAEE59629031AC000B3CBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEE59529031AC000B3CBED /* Assets.xcassets */; };
@@ -27,6 +31,11 @@
 /* Begin PBXFileReference section */
 		07379E65E740C3AC7FA3D44A /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
+		0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0F1FF70F2956335E009CB2B1 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
+		0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderStyle.swift; sourceTree = "<group>"; };
+		0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		0F1FF71729575EA6009CB2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0FAEE58E29031AC000B3CBED /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAEE59129031AC000B3CBED /* MessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerApp.swift; sourceTree = "<group>"; };
 		0FAEE59329031AC000B3CBED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,9 +96,14 @@
 				0FAEE5BD290370DA00B3CBED /* AllView.swift */,
 				0FAEE5BB29036E7700B3CBED /* ViewRouter.swift */,
 				0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */,
+				0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */,
+				0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */,
+				0F1FF70F2956335E009CB2B1 /* testView.swift */,
+				0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */,
 				0FAEE5A529031DE300B3CBED /* bonefire.gif */,
-				0FAEE59F29031C6E00B3CBED /* GoogleService-Info.plist */,
 				0FAEE59529031AC000B3CBED /* Assets.xcassets */,
+				0FAEE59F29031C6E00B3CBED /* GoogleService-Info.plist */,
+				0F1FF71729575EA6009CB2B1 /* Info.plist */,
 				0FAEE59729031AC000B3CBED /* Preview Content */,
 			);
 			path = Messenger;
@@ -243,12 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FAEE5B22903419900B3CBED /* SignUpView.swift in Sources */,
+				0F1FF71629575B3C009CB2B1 /* SplashScreenView.swift in Sources */,
 				0FAEE5BC29036E7700B3CBED /* ViewRouter.swift in Sources */,
 				0FAEE5BA2903648C00B3CBED /* HomePage.swift in Sources */,
 				0FAEE5B8290346ED00B3CBED /* LoginUserView.swift in Sources */,
+				0F1FF7102956335E009CB2B1 /* testView.swift in Sources */,
+				0F1FF70E29562BF2009CB2B1 /* BackgroundView.swift in Sources */,
 				0FAEE5BE290370DA00B3CBED /* AllView.swift in Sources */,
 				0F1FF6E7294CE526009CB2B1 /* UserStateViewModel.swift in Sources */,
 				0FAEE59429031AC000B3CBED /* ContentView.swift in Sources */,
+				0F1FF71229571123009CB2B1 /* PlaceholderStyle.swift in Sources */,
 				0FAEE59229031AC000B3CBED /* MessengerApp.swift in Sources */,
 				0FAEE5B02903218500B3CBED /* LoginScreen.swift in Sources */,
 			);
@@ -376,16 +394,19 @@
 			baseConfigurationReference = 07379E65E740C3AC7FA3D44A /* Pods-Messenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Messenger/Preview Content\"";
 				DEVELOPMENT_TEAM = 478RTL6G2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,16 +427,19 @@
 			baseConfigurationReference = E58A04C2B247115CEDE4B489 /* Pods-Messenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Messenger/Preview Content\"";
 				DEVELOPMENT_TEAM = 478RTL6G2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

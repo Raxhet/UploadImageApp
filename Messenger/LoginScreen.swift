@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Firebase
-import SDWebImageSwiftUI
 
 struct LoginScreen: View {
     
@@ -56,10 +55,7 @@ struct LoginScreen: View {
     
     var body: some View {
         ZStack {
-            AnimatedImage(name: "bonefire.gif")
-            .ignoresSafeArea()
-            .scaledToFill()
-
+            BackgroundView()
             VStack {
                 Text("Welcome!")
                     .foregroundColor(.white)

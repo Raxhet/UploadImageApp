@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomePage: View {
     
-    @EnvironmentObject var viewRouter: ViewRouter
     @StateObject var user = UserStateViewModel()
     
     var body: some View {
@@ -24,6 +23,7 @@ struct HomePage: View {
                     }
                 }
         }
+
     }
 }
 
