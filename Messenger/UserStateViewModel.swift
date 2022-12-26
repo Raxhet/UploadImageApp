@@ -10,10 +10,7 @@ import Firebase
 
 @MainActor
 class UserStateViewModel: ObservableObject {
-    
-    //@EnvironmentObject var viewRouter: ViewRouter
     @Published var firstLogin = false
-    //@Published var currentPage: Page = .loginPage
     
     func signInUser(email: String, password: String) {
         

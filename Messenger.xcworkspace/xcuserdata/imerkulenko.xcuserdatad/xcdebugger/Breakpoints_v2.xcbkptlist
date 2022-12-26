@@ -125,8 +125,8 @@
             filePath = "Messenger/UserStateViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "signInUser(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
