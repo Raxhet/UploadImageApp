@@ -10,10 +10,7 @@ import Firebase
 
 @main
 struct MessengerApp: App {
-    //@StateObject var viewRouter = ViewRouter()
     @StateObject var usvm = UserStateViewModel()
-    //@StateObject var user = User()
-    //@State var log = User().firstLogin //true
     
     init() {
         FirebaseApp.configure()
@@ -21,7 +18,6 @@ struct MessengerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            //AllView().environmentObject(viewRouter)
             Switcher()
                 .environmentObject(usvm)
         }

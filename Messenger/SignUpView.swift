@@ -9,8 +9,6 @@ import SwiftUI
 import Firebase
 
 struct SignUpView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
-    //@EnvironmentObject var vm: UserStateViewModel
     @StateObject var user = UserStateViewModel()
     
     @State private var email = ""
@@ -30,7 +28,7 @@ struct SignUpView: View {
                             .font(.custom(
                                 "AmericanTypewriter", size: 35)
                             .weight(.black))
-                            .colorInvert()
+                            .foregroundColor(.white)
                     }
                     TextField("", text: $email)
                         .keyboardType(.emailAddress)
@@ -48,9 +46,9 @@ struct SignUpView: View {
                         user.signUpUser(email: email, password: password)
                     }) {
                         Text("Create")
-                            .foregroundColor(!signUpProccesing ? .white : .gray)
                             .frame(width: 295, height: 45, alignment: .center)
-                            .background(.orange)
+                            .background(!email.isEmpty && !password.isEmpty ? .orange : .gray)
+                            .foregroundColor(.white)
                             .cornerRadius(20)
                             .padding()
                     }

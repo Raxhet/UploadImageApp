@@ -10,10 +10,10 @@ import Firebase
 
 @MainActor
 class UserStateViewModel: ObservableObject {
-    
-    //@EnvironmentObject var viewRouter: ViewRouter
+
     @Published var firstLogin = false
-    //@Published var currentPage: Page = .loginPage
+
+    let instance = HapticManager()
     
     func signInUser(email: String, password: String) {
         
@@ -23,6 +23,7 @@ class UserStateViewModel: ObservableObject {
                 print(error?.localizedDescription ?? "")
                 return
             }
+            
             switch authResult {
                 case .none:
                     print("Could not sign in user.")
@@ -30,9 +31,10 @@ class UserStateViewModel: ObservableObject {
                     self.firstLogin = true
                     UserDefaults.standard.set(self.firstLogin, forKey: "log")
                         if let window = UIApplication.shared.windows.first { //костыль
-                            window.rootViewController = UIHostingController(rootView: HomePage())
+                            window.rootViewController = UIHostingController(rootView: HomePage().transition(.fade))
                             window.makeKeyAndVisible()
                         }
+                    self.instance.notification(type: .success)
             }
         }
     }
@@ -49,6 +51,8 @@ class UserStateViewModel: ObservableObject {
                     print("Could not create account.")
                 case .some(_):
                     print("Successifully created account with email: \(result?.user.email ?? "")")
+                    self.firstLogin = true
+                    UserDefaults.standard.set(self.firstLogin, forKey: "log")
                     withAnimation {
                         if let window = UIApplication.shared.windows.first { //костыль
                             window.rootViewController = UIHostingController(rootView: HomePage())

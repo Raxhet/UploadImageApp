@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Messenger/MessengerApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "MessengerApp"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 7f18fab18e1af878"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Messenger.MessengerApp.usvm : Messenger.UserStateViewModel"
-                  moduleName = "Messenger"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 537b5be6175b1a63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Messenger.MessengerApp.usvm.getter : Messenger.UserStateViewModel"
-                  moduleName = "Messenger"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "C96CD94D-8B4F-4079-9F30-57A78C094F1D - 785cc06260565660"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Messenger.MessengerApp.$usvm.getter : SwiftUI.ObservedObject&lt;Messenger.UserStateViewModel&gt;.Wrapper"
-                  moduleName = "Messenger"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imerkulenko/Projects/Messenger/Messenger/MessengerApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "67E58F61-6D44-45B4-884B-A0B1C32D3DA3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -77,8 +14,8 @@
             filePath = "Messenger/MessengerApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -125,8 +62,8 @@
             filePath = "Messenger/UserStateViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "signInUser(email:password:)"
             landmarkType = "7">
          </BreakpointContent>

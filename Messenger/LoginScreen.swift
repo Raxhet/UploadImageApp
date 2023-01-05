@@ -14,44 +14,6 @@ struct LoginScreen: View {
     @State private var password = ""
     @State private var showingSheetSignUp = false
     @State private var showingSheetLogIn = false
-    @Environment(\.dismiss) var dismiss
-    
-    @StateObject var user = UserStateViewModel()
-    @EnvironmentObject var vm: UserStateViewModel
-    
-//    var body: some View {
-//        NavigationView {
-//            ZStack {
-//                AnimatedImage(name: "bonefire.gif")
-//                    //.resizable()
-//                    .ignoresSafeArea()
-//                    .scaledToFill()
-//
-//                VStack {
-//                    Text("Welcome!")
-//                        .foregroundColor(.white)
-//                        .font(.custom(
-//                            "AmericanTypewriter", size: 65)
-//                        .weight(.black))
-//
-//                    NavigationLink {
-//                        SignUpView()
-//                    } label: {
-//                        Text("Sign up")
-//                            .foregroundColor(.white)
-//                            .padding(15)
-//                    }
-//
-//                    NavigationLink {
-//                        LoginUserView()
-//                    } label: {
-//                        Text("Log in")
-//                            .foregroundColor(.white)
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     var body: some View {
         ZStack {
@@ -65,7 +27,7 @@ struct LoginScreen: View {
 
                 VStack {
                     Button(action: {
-                        showingSheetSignUp.toggle()
+                            showingSheetSignUp.toggle()
                     }) {
                         Text("Sign up")
                             .font(.custom(

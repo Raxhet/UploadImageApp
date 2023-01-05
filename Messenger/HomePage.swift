@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct HomePage: View {
     
     @StateObject var user = UserStateViewModel()
+    let instance = HapticManager()
     
     var body: some View {
         NavigationView {
@@ -23,7 +25,6 @@ struct HomePage: View {
                     }
                 }
         }
-
     }
 }
 

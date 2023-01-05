@@ -10,16 +10,17 @@ import Firebase
 
 struct LoginUserView: View {
     
-    @EnvironmentObject var viewRouter: ViewRouter
     @State private var email = ""
     @State private var password = ""
+    
     @State var signInProcessing = false
     @State var signInErrorMessage = ""
-    @Environment(\.dismiss) var dismiss
-    //@StateObject var user = UserStateViewModel()
     
-    @EnvironmentObject var vm: UserStateViewModel
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var color
     @StateObject var user = UserStateViewModel()
+    
+    let instance = HapticManager()
     
     var body: some View {
         NavigationView {
@@ -32,7 +33,7 @@ struct LoginUserView: View {
                             .font(.custom(
                                 "AmericanTypewriter", size: 35)
                             .weight(.black))
-                            .colorInvert()
+                            .foregroundColor(.white)
                     }
                     
                     TextField("", text: $email)
@@ -53,13 +54,13 @@ struct LoginUserView: View {
                         user.signInUser(email: email, password: password)
                     }) {
                         Text("Log In")
-                            .foregroundColor(!signInProcessing ? .white : .gray)
                             .frame(width: 295, height: 45, alignment: .center)
-                            .background(.orange)
+                            .background(!email.isEmpty && !password.isEmpty ? .orange : .gray)
+                            .foregroundColor(.white)
                             .cornerRadius(20)
                             .padding()
                     }
-                    .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+                    .disabled(!email.isEmpty && !password.isEmpty ? false : true)
                 }
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
@@ -72,7 +73,6 @@ struct LoginUserView: View {
             }
         }
         
-        
         if signInProcessing {
             ProgressView()
         }
@@ -81,39 +81,10 @@ struct LoginUserView: View {
                 .foregroundColor(.red)
         }
     }
-    
-//    func signInUser(userEmail: String, userPassword: String) {
-//
-//        signInProcessing = true
-//
-//        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-//
-//            guard error == nil else {
-//                signInProcessing = false
-//                signInErrorMessage = error!.localizedDescription
-//                return
-//            }
-//            switch authResult {
-//            case .none:
-//                print("Could not sign in user.")
-//                signInProcessing = false
-//            case .some(_):
-//                print("User signed in")
-//                signInProcessing = false
-//                user.firstLogin = false
-//                withAnimation {
-//                    viewRouter.currentPage = .homePage
-//                }
-//            }
-//
-//        }
-//    }
-
-    
 }
 
 struct LoginUserView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUserView()
+            LoginUserView()
     }
 }
