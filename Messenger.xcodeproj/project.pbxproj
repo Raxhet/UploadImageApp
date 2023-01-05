@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F1FF6E7294CE526009CB2B1 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */; };
 		0F1FF70E29562BF2009CB2B1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */; };
-		0F1FF7102956335E009CB2B1 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF70F2956335E009CB2B1 /* testView.swift */; };
 		0F1FF71229571123009CB2B1 /* PlaceholderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */; };
 		0F1FF71629575B3C009CB2B1 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */; };
 		0FAEE59229031AC000B3CBED /* MessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE59129031AC000B3CBED /* MessengerApp.swift */; };
@@ -23,8 +22,9 @@
 		0FAEE5B22903419900B3CBED /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE5B12903419800B3CBED /* SignUpView.swift */; };
 		0FAEE5B8290346ED00B3CBED /* LoginUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE5B7290346ED00B3CBED /* LoginUserView.swift */; };
 		0FAEE5BA2903648C00B3CBED /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE5B92903648C00B3CBED /* HomePage.swift */; };
-		0FAEE5BC29036E7700B3CBED /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE5BB29036E7700B3CBED /* ViewRouter.swift */; };
-		0FAEE5BE290370DA00B3CBED /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEE5BD290370DA00B3CBED /* AllView.swift */; };
+		0FF8C81F2965D95300ED69D3 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C81E2965D95300ED69D3 /* HapticManager.swift */; };
+		0FF8C8232965F99B00ED69D3 /* GridImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C8222965F99B00ED69D3 /* GridImageVIew.swift */; };
+		0FF8C8772967326900ED69D3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C8762967326900ED69D3 /* ImagePicker.swift */; };
 		73D81E9D12B06CAEA6BB8791 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC34962FCCFC20D82238163E /* Pods_Messenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,6 @@
 		07379E65E740C3AC7FA3D44A /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
 		0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		0F1FF70F2956335E009CB2B1 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderStyle.swift; sourceTree = "<group>"; };
 		0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		0F1FF71729575EA6009CB2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -47,8 +46,9 @@
 		0FAEE5B12903419800B3CBED /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0FAEE5B7290346ED00B3CBED /* LoginUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserView.swift; sourceTree = "<group>"; };
 		0FAEE5B92903648C00B3CBED /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
-		0FAEE5BB29036E7700B3CBED /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		0FAEE5BD290370DA00B3CBED /* AllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
+		0FF8C81E2965D95300ED69D3 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		0FF8C8222965F99B00ED69D3 /* GridImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageVIew.swift; sourceTree = "<group>"; };
+		0FF8C8762967326900ED69D3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CC34962FCCFC20D82238163E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58A04C2B247115CEDE4B489 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,13 +93,13 @@
 				0FAEE5B7290346ED00B3CBED /* LoginUserView.swift */,
 				0FAEE5B12903419800B3CBED /* SignUpView.swift */,
 				0FAEE5B92903648C00B3CBED /* HomePage.swift */,
-				0FAEE5BD290370DA00B3CBED /* AllView.swift */,
-				0FAEE5BB29036E7700B3CBED /* ViewRouter.swift */,
 				0F1FF6E6294CE526009CB2B1 /* UserStateViewModel.swift */,
 				0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */,
 				0F1FF71129571123009CB2B1 /* PlaceholderStyle.swift */,
-				0F1FF70F2956335E009CB2B1 /* testView.swift */,
 				0F1FF71529575B3C009CB2B1 /* SplashScreenView.swift */,
+				0FF8C81E2965D95300ED69D3 /* HapticManager.swift */,
+				0FF8C8222965F99B00ED69D3 /* GridImageVIew.swift */,
+				0FF8C8762967326900ED69D3 /* ImagePicker.swift */,
 				0FAEE5A529031DE300B3CBED /* bonefire.gif */,
 				0FAEE59529031AC000B3CBED /* Assets.xcassets */,
 				0FAEE59F29031C6E00B3CBED /* GoogleService-Info.plist */,
@@ -256,14 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF8C8772967326900ED69D3 /* ImagePicker.swift in Sources */,
+				0FF8C81F2965D95300ED69D3 /* HapticManager.swift in Sources */,
 				0FAEE5B22903419900B3CBED /* SignUpView.swift in Sources */,
+				0FF8C8232965F99B00ED69D3 /* GridImageVIew.swift in Sources */,
 				0F1FF71629575B3C009CB2B1 /* SplashScreenView.swift in Sources */,
-				0FAEE5BC29036E7700B3CBED /* ViewRouter.swift in Sources */,
 				0FAEE5BA2903648C00B3CBED /* HomePage.swift in Sources */,
 				0FAEE5B8290346ED00B3CBED /* LoginUserView.swift in Sources */,
-				0F1FF7102956335E009CB2B1 /* testView.swift in Sources */,
 				0F1FF70E29562BF2009CB2B1 /* BackgroundView.swift in Sources */,
-				0FAEE5BE290370DA00B3CBED /* AllView.swift in Sources */,
 				0F1FF6E7294CE526009CB2B1 /* UserStateViewModel.swift in Sources */,
 				0FAEE59429031AC000B3CBED /* ContentView.swift in Sources */,
 				0F1FF71229571123009CB2B1 /* PlaceholderStyle.swift in Sources */,
