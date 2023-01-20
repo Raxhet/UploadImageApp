@@ -1,21 +1,19 @@
-//
-//  SignUpView.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 22.10.2022.
-//
-
 import SwiftUI
 import Firebase
 
-struct SignUpView: View {
-    @StateObject var user = UserStateViewModel()
+struct LoginUserView: View {
     
     @State private var email = ""
     @State private var password = ""
-    @State var signUpProccesing = false
-    @State var signUpErrorMessage = ""
+    
+    @State var signInProcessing = false
+    @State var signInErrorMessage = ""
+    
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var color
+    @StateObject var user = UserStateViewModel()
+    
+    let instance = HapticManager()
     
     var body: some View {
         NavigationView {
@@ -24,38 +22,41 @@ struct SignUpView: View {
                     .blur(radius: 2)
                 VStack{
                     HStack {
-                        Text("Create Account")
+                        Text("Log In")
                             .font(.custom(
                                 "AmericanTypewriter", size: 35)
                             .weight(.black))
                             .foregroundColor(.white)
                     }
+                    
                     TextField("", text: $email)
                         .keyboardType(.emailAddress)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
-                        .frame(width: 280, height: 40, alignment: .center)
+                        .frame(width: 270, height: 45, alignment: .center)
                         .modifier(PlaceholderStyle(showPlaceHolder: email.isEmpty, placeholder: "Email"))
                         .padding()
+                        
                     
                     SecureField("", text: $password)
-                        .frame(width: 280, height: 40, alignment: .center)
+                        .frame(width: 270, height: 45, alignment: .center)
                         .modifier(PlaceholderStyle(showPlaceHolder: password.isEmpty, placeholder: "Password"))
+                        
                     
                     Button(action: {
-                        user.signUpUser(email: email, password: password)
+                        user.signInUser(email: email, password: password)
                     }) {
-                        Text("Create")
+                        Text("Log In")
                             .frame(width: 295, height: 45, alignment: .center)
                             .background(!email.isEmpty && !password.isEmpty ? .orange : .gray)
                             .foregroundColor(.white)
                             .cornerRadius(20)
                             .padding()
                     }
-                    .disabled(!signUpProccesing && !email.isEmpty && !password.isEmpty ? false : true)
+                    .disabled(!email.isEmpty && !password.isEmpty ? false : true)
                 }
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .cancellationAction) {
                         Button("Cancel", role: .cancel) {
                             dismiss()
                         }
@@ -65,42 +66,18 @@ struct SignUpView: View {
             }
         }
         
-        if signUpProccesing {
+        if signInProcessing {
             ProgressView()
         }
-        if !signUpErrorMessage.isEmpty {
-            Text("Error: \(signUpErrorMessage)")
+        if !signInErrorMessage.isEmpty {
+            Text("Error: \(signInErrorMessage)")
                 .foregroundColor(.red)
         }
     }
-    
-//    func createUser(userEmail: String, userPassword: String) {
-//        
-//        signUpProccesing = true
-//        
-//        Auth.auth().createUser(withEmail: userEmail, password: userPassword, completion: { result, error in
-//            guard error == nil else {
-//                print("\(error?.localizedDescription ?? " ")")
-//                signUpErrorMessage = error!.localizedDescription
-//                signUpProccesing = false
-//                return
-//            }
-//            switch result {
-//               case .none:
-//                   print("Could not create account.")
-//                   signUpProccesing = false
-//               case .some(_):
-//                   print("Successifully created account with email: \(result?.user.email ?? "")")
-//                   signUpProccesing = false
-//                   user.firstLogin = false
-//                   viewRouter.currentPage = .homePage
-//               }
-//        })
-//    }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct LoginUserView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+            LoginUserView()
     }
 }

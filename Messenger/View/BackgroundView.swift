@@ -1,10 +1,3 @@
-//
-//  backgroundView.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 24.12.2022.
-//
-
 import SwiftUI
 import SDWebImageSwiftUI
 

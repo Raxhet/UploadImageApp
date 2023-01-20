@@ -1,10 +1,3 @@
-//
-//  PlaceholderStyle.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 24.12.2022.
-//
-
 import SwiftUI
 
 public struct PlaceholderStyle: ViewModifier {

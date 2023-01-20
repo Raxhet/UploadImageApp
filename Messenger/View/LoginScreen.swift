@@ -1,10 +1,3 @@
-//
-//  LoginScreen.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 21.10.2022.
-//
-
 import SwiftUI
 import Firebase
 

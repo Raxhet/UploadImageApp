@@ -1,9 +1,3 @@
-//
-//  User.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 17.12.2022.
-//
 import SwiftUI
 import Foundation
 import Firebase
@@ -30,8 +24,8 @@ class UserStateViewModel: ObservableObject {
                 case .some(_):
                     self.firstLogin = true
                     UserDefaults.standard.set(self.firstLogin, forKey: "log")
-                        if let window = UIApplication.shared.windows.first { //костыль
-                            window.rootViewController = UIHostingController(rootView: HomePage().transition(.fade))
+                        if let window = UIApplication.shared.windows.first { 
+                            window.rootViewController = UIHostingController(rootView: HomePage(image: [UIImage()]))
                             window.makeKeyAndVisible()
                         }
                     self.instance.notification(type: .success)
@@ -55,7 +49,7 @@ class UserStateViewModel: ObservableObject {
                     UserDefaults.standard.set(self.firstLogin, forKey: "log")
                     withAnimation {
                         if let window = UIApplication.shared.windows.first { //костыль
-                            window.rootViewController = UIHostingController(rootView: HomePage())
+                            window.rootViewController = UIHostingController(rootView: HomePage(image: [UIImage()]))
                             window.makeKeyAndVisible()
                         }
                     }
@@ -75,7 +69,7 @@ class UserStateViewModel: ObservableObject {
             print("Error signing out: %@", signOutError)
         }
         withAnimation {
-            if let window = UIApplication.shared.windows.first { //костыль
+            if let window = UIApplication.shared.windows.first {
                 window.rootViewController = UIHostingController(rootView: LoginScreen())
                 window.makeKeyAndVisible()
             }

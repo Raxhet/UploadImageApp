@@ -1,10 +1,3 @@
-//
-//  HapticManager.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 04.01.2023.
-//
-
 import SwiftUI
 
 class HapticManager {

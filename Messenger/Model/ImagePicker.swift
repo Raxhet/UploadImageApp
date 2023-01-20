@@ -1,14 +1,8 @@
-//
-//  ImagePicker.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 06.01.2023.
-//
-
 import Foundation
-//import UIKit
 import SwiftUI
 import PhotosUI
+import FirebaseStorage
+import FirebaseFirestore
 
 struct ImagePicker: UIViewControllerRepresentable {
     
@@ -23,6 +17,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         var configuration = PHPickerConfiguration()
         configuration.selectionLimit = self.selectionLimit
         configuration.filter = self.filter
+        configuration.selection = .ordered
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = context.coordinator
         return picker
@@ -45,7 +40,6 @@ struct ImagePicker: UIViewControllerRepresentable {
         }
         
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            //Dismiss picker
             picker.dismiss(animated: true)
 
             if !results.isEmpty {
@@ -54,7 +48,10 @@ struct ImagePicker: UIViewControllerRepresentable {
             }
             
             parent.itemProviders = results.map(\.itemProvider)
-            loadImage()
+
+            DispatchQueue.main.async {
+                self.loadImage()
+            }
         }
         
         private func loadImage() {
@@ -63,13 +60,30 @@ struct ImagePicker: UIViewControllerRepresentable {
                     itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
                         if let image = image as? UIImage {
                             self.parent.images.append(image)
+                            uploadPhoto(image: image)
                         } else {
                             print("Could not load image", error?.localizedDescription ?? "")
                         }
                     }
                 }
             }
+            
+            func uploadPhoto(image: UIImage) {
+                let storageRef = Storage.storage().reference()
+                let path = "images/\(UUID().uuidString)"
+                let fileRef = storageRef.child(path)
+                let imageData = image.jpegData(compressionQuality: 0.8)
+                if let data = imageData {
+                    fileRef.putData(data, metadata: nil) { metadata, err in
+                        if err == nil && metadata != nil {
+                            let db = Firestore.firestore()
+                            db.collection("images").document().setData(["url":path])
+                            }
+                            }
+                        }
+                        
+                    }
+                }
+            }
         }
-        
-    }
-}
+

@@ -1,26 +1,14 @@
-//
-//  LoginUserView.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 22.10.2022.
-//
-
 import SwiftUI
 import Firebase
 
-struct LoginUserView: View {
+struct SignUpView: View {
+    @StateObject var user = UserStateViewModel()
     
     @State private var email = ""
     @State private var password = ""
-    
-    @State var signInProcessing = false
-    @State var signInErrorMessage = ""
-    
+    @State var signUpProccesing = false
+    @State var signUpErrorMessage = ""
     @Environment(\.dismiss) var dismiss
-    @Environment(\.colorScheme) var color
-    @StateObject var user = UserStateViewModel()
-    
-    let instance = HapticManager()
     
     var body: some View {
         NavigationView {
@@ -29,62 +17,59 @@ struct LoginUserView: View {
                     .blur(radius: 2)
                 VStack{
                     HStack {
-                        Text("Log In")
+                        Text("Create Account")
                             .font(.custom(
                                 "AmericanTypewriter", size: 35)
                             .weight(.black))
                             .foregroundColor(.white)
                     }
-                    
                     TextField("", text: $email)
                         .keyboardType(.emailAddress)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
-                        .frame(width: 270, height: 45, alignment: .center)
+                        .frame(width: 280, height: 40, alignment: .center)
                         .modifier(PlaceholderStyle(showPlaceHolder: email.isEmpty, placeholder: "Email"))
                         .padding()
-                        
                     
                     SecureField("", text: $password)
-                        .frame(width: 270, height: 45, alignment: .center)
+                        .frame(width: 280, height: 40, alignment: .center)
                         .modifier(PlaceholderStyle(showPlaceHolder: password.isEmpty, placeholder: "Password"))
-                        
                     
                     Button(action: {
-                        user.signInUser(email: email, password: password)
+                        user.signUpUser(email: email, password: password)
                     }) {
-                        Text("Log In")
+                        Text("Create")
                             .frame(width: 295, height: 45, alignment: .center)
                             .background(!email.isEmpty && !password.isEmpty ? .orange : .gray)
                             .foregroundColor(.white)
                             .cornerRadius(20)
                             .padding()
                     }
-                    .disabled(!email.isEmpty && !password.isEmpty ? false : true)
+                    .disabled(!signUpProccesing && !email.isEmpty && !password.isEmpty ? false : true)
                 }
                 .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
+                    ToolbarItem(placement: .navigationBarLeading) {
                         Button("Cancel", role: .cancel) {
                             dismiss()
                         }
                         .foregroundColor(.orange)
                     }
-            }
+                }
             }
         }
         
-        if signInProcessing {
+        if signUpProccesing {
             ProgressView()
         }
-        if !signInErrorMessage.isEmpty {
-            Text("Error: \(signInErrorMessage)")
+        if !signUpErrorMessage.isEmpty {
+            Text("Error: \(signUpErrorMessage)")
                 .foregroundColor(.red)
         }
     }
 }
 
-struct LoginUserView_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-            LoginUserView()
+        SignUpView()
     }
 }

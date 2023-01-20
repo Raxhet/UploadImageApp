@@ -1,25 +1,18 @@
-//
-//  MessengerApp.swift
-//  Messenger
-//
-//  Created by Илья Меркуленко on 21.10.2022.
-//
-
 import SwiftUI
 import Firebase
 
 @main
 struct MessengerApp: App {
-    @StateObject var usvm = UserStateViewModel()
     
     init() {
         FirebaseApp.configure()
     }
     
+    @StateObject var vm = UserStateViewModel()
     var body: some Scene {
         WindowGroup {
             Switcher()
-                .environmentObject(usvm)
+                .environmentObject(vm)
         }
     }
 }
@@ -31,7 +24,7 @@ struct Switcher: View {
 
     var body: some View {
         if (login) {
-            HomePage()
+            HomePage(image: [UIImage()])
                 .environmentObject(vm)
         } else {
             LoginScreen()
