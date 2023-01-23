@@ -122,13 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				0FAEE59129031AC000B3CBED /* MessengerApp.swift */,
-				0FE41564297AEBD20005C272 /* TestFeatures */,
 				0FE41563297AEBB80005C272 /* Model */,
 				0FE41562297AEB840005C272 /* ViewModel */,
 				0FE41561297AEB470005C272 /* View */,
-				0FAEE5A529031DE300B3CBED /* bonefire.gif */,
-				0FAEE59529031AC000B3CBED /* Assets.xcassets */,
+				0FE41564297AEBD20005C272 /* TestFeatures */,
 				0FAEE59F29031C6E00B3CBED /* GoogleService-Info.plist */,
+				0FAEE59529031AC000B3CBED /* Assets.xcassets */,
+				0FAEE5A529031DE300B3CBED /* bonefire.gif */,
 				0F1FF71729575EA6009CB2B1 /* Info.plist */,
 				0FAEE59729031AC000B3CBED /* Preview Content */,
 			);
@@ -146,12 +146,12 @@
 		0FE41561297AEB470005C272 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FAEE5B92903648C00B3CBED /* HomePage.swift */,
 				0FAEE5B7290346ED00B3CBED /* LoginUserView.swift */,
 				0FAEE5AF2903218500B3CBED /* LoginScreen.swift */,
 				0FAEE5B12903419800B3CBED /* SignUpView.swift */,
-				0FAEE5B92903648C00B3CBED /* HomePage.swift */,
-				0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */,
 				0FF8C8222965F99B00ED69D3 /* GridImageVIew.swift */,
+				0F1FF70D29562BF2009CB2B1 /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

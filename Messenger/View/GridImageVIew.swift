@@ -13,6 +13,7 @@ struct GridImageVIew: View {
     @State var isShowing = false
     @State var images: [UIImage]
     @StateObject var imageList = FireImageModel()
+    @StateObject var user = UserStateViewModel()
     @State var showImageViewer: Bool = false
     
     var body: some View {
@@ -37,7 +38,7 @@ struct GridImageVIew: View {
                         }
                     }
                 }.padding(.horizontal)
-                    .navigationBarTitle("Your Memories")
+                    .navigationBarTitle("Images")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
@@ -47,6 +48,14 @@ struct GridImageVIew: View {
                             }
                             .sheet(isPresented: $isShowing, onDismiss: nil) {
                                 ImagePicker(images: $images, selectionLimit: 0)
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                user.signOutUser()
+                            }) {
+                                Text("Sign Out")
                             }
                         }
                     }
