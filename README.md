@@ -16,7 +16,9 @@ Project is created with:
 
 ## Media
 * First Screen/Log In process/Upload photos to Firestore
+
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/Gif.gif)
 
 * Retrieved images from Firestore
+
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/image.png)
