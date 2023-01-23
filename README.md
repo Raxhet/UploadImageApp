@@ -15,8 +15,9 @@ Project is created with:
 * SDWebImage
 
 ## Media
-*First Screen/Log In process/Upload photos to Firestore
+* First Screen/Log In process/Upload photos to Firestore
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/Gif.gif)
 
-*Retrieved images from Firestore
+* Retrieved images from Firestore
+
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/image.png)
