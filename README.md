@@ -19,5 +19,4 @@ Project is created with:
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/Gif.gif)
 
 * Retrieved images from Firestore
-
 ![](https://github.com/Raxhet/MessengerApp/blob/dev/image.png)
